@@ -1,0 +1,25 @@
+# Lab 5: Static Code Analysis — Reflection
+
+## 1. What did you learn from using static code analysis tools?
+
+I learned that static code analysis tools can identify code quality, formatting, maintainability, and security problems without executing the program. Pylint checks code quality, Flake8 checks style and formatting, and Bandit identifies common security risks.
+
+## 2. Which issue was the most important to fix, and why?
+
+The use of `eval()` was an important issue because it can execute unintended code when given untrusted input. I replaced it with direct salary and tax calculations. I also replaced MD5 with SHA-256 and used the `secrets` module to generate security tokens.
+
+## 3. How did the fixes improve the program?
+
+The fixes improved the program's readability, maintainability, and security. I removed unused code, improved input validation, avoided a mutable default argument, used safer file handling, and removed unnecessary shell execution.
+
+## 4. What were the final results from the tools?
+
+The final Pylint score was **10.00/10**. Bandit reported **no issues identified**, and Flake8 reported **no violations** for the revised Python file.
+
+## 5. What challenges did you face?
+
+One challenge was ensuring that the analysis reports were generated from the revised Python file rather than the original file. I corrected the filename and reran the tools to verify the final results.
+
+## Conclusion
+
+This lab helped me understand how static analysis tools support secure and maintainable Python development. I learned to use Pylint, Bandit, and Flake8 to detect and address problems before submitting code.
